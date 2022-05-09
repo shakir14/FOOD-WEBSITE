@@ -1,53 +1,132 @@
+/* reset reset  */
 *{
-    margin:0px;
-    padding:0px;
+    margin: 0;
+    padding: 0;
 }
+
+/* Navigation Bar */
+#navbar{
+    display:flex;
+    align-items: center;
+}
+
 #logo{
-    height: 60px;
-    width: 60px;
+    margin:10px 15px;
 }
-#logo-div{
-    display: block;
-    width: 60px;
-    margin-top: 10px;
-    margin-left: 10px;
+
+#logo img{
+    height: 100px;
+    width: 100px;
+    margin:3px 2px;
 }
-#logo-div:hover{
+
+#logo img:hover{
     transform: scale(110%);
     cursor: pointer;
 }
-#navbar {
-    display: flex;
-    align-items: center;
+
+#navbar{
     position: relative;
 }
+#navbar ul{
+    display:flex;
+}
+
 #navbar::before{
-    content: "";
-    background-color:black;
+    content:"";
+    background-color: black;
     position: absolute;
-    height: 150px;
+    height: 100%;
     width: 100%;
-    opacity: 0.2;
+    opacity: 0.5;
     z-index: -1;
 }
-#navbar ul{
-    display: flex;
-}
+
 #navbar li{
-    list-style-type:none;
+    list-style: none;
     font-size: 1.5rem;
+    
 }
-#navbar a{
-    display:block;
-    padding: 10px 20px;
+#navbar li a{
+    display: block;
+    padding: 0 20px;
+    color: white;
+    font-family: 'Macondo', cursive;
+    border-radius: 14px;
     text-decoration: none;
+}
+#navbar li a:hover{
+    color: black;
+    background-color: white;
+}
+
+/* section Styling */
+#home{
+    display:flex;
+    flex-direction: column;
+    height: 400px;
+    padding: 5px 100px;
     justify-content: center;
     align-items: center;
-    color: black;
-
 }
-#navbar a:hover{
-    background-color: white;
-    color: black;
+#home::before{
+    content: "";
+    position: absolute;
+    background: url('../background/food.jpeg') no-repeat center center/cover;
+    height: 100%;
+    width: 100%;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+/* Utility Classes */
+.h-primary{
+    font-size: 3rem;
+    padding: 12px;
+}
+.btn{
+    padding: 5px 20px;
+    background-color: brown;
     border-radius: 20px;
+    margin: 10px 20px;
+    border: 2px solid white;
+    color: white;
+    cursor:pointer;
+}
+
+.h-secondary{
+    font-size: 3rem;
+    padding:20px;
+}
+
+.center{
+    text-align: center;
+}
+
+
+#home h1{
+    color:black;
+    text-align: center;
+    font-family: 'Macondo', cursive;
+}
+
+#home p{
+    color: black;
+    text-align: center;
+    font-size: 1.3rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+#services{
+    display: flex;
+    margin: 35px;
+}
+#services .box{
+    border:2px soild black;
+}
+#services .box img{
+    height: 150px;
+    width: 160px;
+
 }
