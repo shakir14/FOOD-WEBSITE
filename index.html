@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FoodHeyDelivery.com</title>
     <link rel="stylesheet" href="CSS/food.css">
+    <link rel="stylesheet" media="screen and (max-width:1245px)" href="CSS/phone.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Macondo&display=swap" rel="stylesheet">
@@ -22,10 +24,10 @@
             <img src="LOGO/logo.png" alt="FoodHeyDelivery.com"></img>
         </div>
         <ul>
-            <li class="item"><a href="#">Home</a></li>
-            <li class="item"><a href="#">Services</a></li>
-            <li class="item"><a href="#">About us</a></li>
-            <li class="item"><a href="#">Contact us</a></li>
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#services-container">Services</a></li>
+            <li class="item"><a href="#client-section">Our Clients</a></li>
+            <li class="item"><a href="#contantus">Contact us</a></li>
         </ul>
     </nav>
 
@@ -38,21 +40,82 @@
         <button class="btn">Order Food</button>
     </section>
 
-    <section class="services-container">
-        <h1 class="h1-primary">
+    <section id="services-container">
+        <h1 class="h-primary">
             Our Services
         </h1>
         <div id="services">
             <div class="box">
                 <img src="LOGO/foodpng.png" alt="">
-                <h2 class="h-secondary center"></h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum voluptatum dolor officiis, debitis
+                <h2 class="h-secondary center">Food Catering</h2>
+                <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum voluptatum dolor
+                    officiis, debitis
+                    abdignissimos nesciunt, quis, quibusdam recusandae qui vero expedita atque quasi repudiandae
+                    perspiciatis reprehenderit voluptate ratione. Mollitia aperiam repudiandae quos sint.
+                </p>
+            </div>
+            <div class="box">
+                <img src="LOGO/food2png.png" alt="">
+                <h2 class="h-secondary center">Bulk Ordering</h2>
+                <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum voluptatum dolor
+                    officiis, debitis
+                    abdignissimos nesciunt, quis, quibusdam recusandae qui vero expedita atque quasi repudiandae
+                    perspiciatis reprehenderit voluptate ratione. Mollitia aperiam repudiandae quos sint.
+                </p>
+            </div>
+            <div class="box">
+                <img src="LOGO/food3.png" alt="" id="food3">
+                <h2 class="h-secondary center">Food Ordering</h2>
+                <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum voluptatum dolor
+                    officiis, debitis
                     abdignissimos nesciunt, quis, quibusdam recusandae qui vero expedita atque quasi repudiandae
                     perspiciatis reprehenderit voluptate ratione. Mollitia aperiam repudiandae quos sint.
                 </p>
             </div>
         </div>
     </section>
+
+    <section id="client-section">
+        <h1 class="h-primary center">Our Clients</h1>
+        <div id="clients">
+            <div class="client-items">
+                <img src="/FOOD WEBSITE/FOOD-WEBSITE/LOGO/acerlogo.png" alt="acer">
+            </div>
+            <div class="client-items">
+                <img src="/FOOD WEBSITE/FOOD-WEBSITE/LOGO/asuslogo.png" alt="asus">
+            </div>
+            <div class="client-items">
+                <img src="/FOOD WEBSITE/FOOD-WEBSITE/LOGO/hplogo.png" alt="hp">
+            </div>
+            <div class="client-items">
+                <img src="/FOOD WEBSITE/FOOD-WEBSITE/LOGO/skypelogo.png" alt="skype ">
+            </div>
+        </div>
+    </section>
+
+    <section id="contantus">
+        <h1 class="h-primary center">Contact Us</h1>
+        <div id="contact-box">
+            <form action="#">
+                <div class="from-group">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" placeholder="Enter your Name">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" placeholder="Enter your Email">
+                    <label for="phone">Phone Number:</label>
+                    <input type="number" name="phone" id="phone" placeholder="Enter your Phone Number">
+                    <label for="message">Message:</label>
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter your Message"></textarea>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="center">
+            Copyrights &copy; www.FoodHeyDelivery.com All Rights Reserved 2022-23.
+        </div>
+    </footer>
 </body>
 
 </html>

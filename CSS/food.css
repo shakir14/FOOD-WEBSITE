@@ -4,30 +4,35 @@
     padding: 0;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 /* Navigation Bar */
 #navbar{
     display:flex;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 #logo{
-    margin:10px 15px;
+    margin:5px 15px;
 }
 
 #logo img{
-    height: 100px;
-    width: 100px;
+    height: 60px;
+    width: 60px;
     margin:3px 2px;
 }
 
 #logo img:hover{
     transform: scale(110%);
     cursor: pointer;
+    transition-duration: 0.2s;
 }
 
-#navbar{
-    position: relative;
-}
 #navbar ul{
     display:flex;
 }
@@ -38,13 +43,13 @@
     position: absolute;
     height: 100%;
     width: 100%;
-    opacity: 0.5;
-    z-index: -1;
+    opacity: 0.4;
+    z-index: -1 ;
 }
 
 #navbar li{
     list-style: none;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     
 }
 #navbar li a{
@@ -64,16 +69,20 @@
 #home{
     display:flex;
     flex-direction: column;
-    height: 400px;
+    height: 500px;
     padding: 5px 100px;
+    position: relative;
     justify-content: center;
     align-items: center;
+
 }
 #home::before{
     content: "";
     position: absolute;
     background: url('../background/food.jpeg') no-repeat center center/cover;
     height: 100%;
+    top:0;
+    left:0;
     width: 100%;
     opacity: 0.4;
     z-index: -1;
@@ -83,6 +92,7 @@
 .h-primary{
     font-size: 3rem;
     padding: 12px;
+    text-align: center;
 }
 .btn{
     padding: 5px 20px;
@@ -93,9 +103,13 @@
     color: white;
     cursor:pointer;
 }
+.btn:hover{
+    transform:scale(110%);
+    transition-duration: 0.2s;
+}
 
 .h-secondary{
-    font-size: 3rem;
+    font-size: 2rem;
     padding:20px;
 }
 
@@ -122,11 +136,120 @@
     display: flex;
     margin: 35px;
 }
+#services-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+}
+#services-container::before{
+    content: "";
+    position:absolute;
+    background:url("../background/network-g19281b4d9_1280.jpg") no-repeat center center/cover;
+    opacity: 0.4;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
 #services .box{
-    border:2px soild black;
+    border:3px solid black;
+    padding: 35px;
+    margin: 10px 20px;
+    border-radius: 20px;
+    background-color:bisque;
+}
+#services .box:hover{
+
+    transform: scale(110%);
+    transition-duration: 0.2s;
 }
 #services .box img{
+    display: block;
+    margin: auto;
     height: 150px;
     width: 160px;
+}
+#services .box #food3{
+    width:250px;
+}
 
+#client-section{
+    height: 100%;
+    position: relative;
+
+}
+
+#clients{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#clients img{
+    height: 100px;
+} 
+#clients img:hover{
+    transform: scale(110%);
+    transition-duration: 0.2s;
+} 
+.client-items{
+    padding: 10px 22px;
+    margin: 10px 10px;
+
+}
+
+#client-section::before{
+    content:"";
+    position: absolute;
+    background: url('../background/food.jpg') no-repeat center center/cover;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.2;
+
+}
+
+/* contact section */
+#contantus{
+    position: relative;
+    
+}
+#contantus::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.3;
+    background: url('../background/contactus.jpg') no-repeat center center/cover;
+}
+
+#contact-box{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input,
+#contact-box textarea{
+    width: 100%;
+    padding:0.4rem;
+
+}
+
+#contact-box form{
+    width: 40%;
+    margin-top: 20px;
+    padding: 10px;
+}
+#contact-box label{
+    font-size: 20px;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    opacity: 0.85;
+    /* z-index: -1; */
+    padding: 10px 15px;
 }
